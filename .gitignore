@@ -1,0 +1,18 @@
+# Secrets — never commit these
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+**/credentials*
+
+# Hook audit logs (local only)
+changelog.txt
+**/changelog.txt
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+node_modules/
