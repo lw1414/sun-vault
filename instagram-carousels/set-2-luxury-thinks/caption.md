@@ -8,15 +8,18 @@
 3. One engineer. Lifetime monitoring.
 4. Real savings. Real proof. → Book your call
 
-**Instagram caption:**
+**Instagram caption (final, ready to post):**
 
-Going solar is easy. Knowing it actually works is the hard part.
+Going solar is easy. Knowing it actually works is the hard part. ☀️
 
-Most installers vanish after the truck leaves and you become a ticket number. SunVault gives you one dedicated engineer and lifetime monitoring, so a dip gets caught before you would ever notice.
+Most installers vanish the moment the truck leaves, and you turn into a ticket number. SunVault does it differently: one dedicated engineer from your first call to switch-on, plus lifetime monitoring that catches a dip before you ever would.
 
-Real savings, up to 90,000 pesos a year, watched live in your pocket. Book a free Solar Savings and Design Call, link in bio.
+That is what "luxury solar that thinks" really means. Real savings, up to ₱90,000 a year, watched live in your pocket from day one. No guessing, just proof.
 
-#solarphilippines #solarenergy #smarthome #energysavings #luxuryliving
+Book a free Solar Savings & Design Call. Link in bio. 👆
+
+**Hashtags:**
+#SunVault #SunVaultLive #LuxurySolar #SolarPhilippines #SolarPH #SolarPower #SolarEnergy #RenewableEnergyPhilippines #SolarPanelsPH #CleanEnergy #SmartHome #HomeBattery #EnergySavings #MeralcoBill #GoSolar #SustainableLiving #LuxuryHomesPH #SolarInstallation #FutureIsSolar #SolarSavings
 
 **Posting tip:** add music before posting (audio option under the caption) — it lifts
 engagement and makes the carousel eligible to surface on the Reels tab.
