@@ -9,7 +9,7 @@ One page. Everything you need while building, screenshotting, and presenting.
 | Thing | Link |
 |---|---|
 | GHL booking calendar | https://api.leadconnectorhq.com/widget/booking/HYbkri3gw1CDqlj1TGjp |
-| Deployed landing page | `__________________` |
+| Deployed landing page | https://sun-vault-ashen.vercel.app/ |
 | Instagram post (optional) | `__________________` |
 | Facebook ad draft (Ads Manager) | `__________________` |
 

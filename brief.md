@@ -73,7 +73,7 @@ confidence. We never pressure; we make the smart choice obvious.
 ## System links (fill in as you build)
 
 - **Booking calendar link (GHL):** https://api.leadconnectorhq.com/widget/booking/HYbkri3gw1CDqlj1TGjp
-- **Landing page link (deployed):** `<<paste after Part 2>>`
+- **Landing page link (deployed):** https://sun-vault-ashen.vercel.app/
 - **Facebook Page / ad account:** `<<same as Facebook Ads module>>`
 
 ---
