@@ -12,7 +12,7 @@
   :root{
     --navy:#0B1F2A; --navy-deep:#081820; --navy-panel:#0F2A38;
     --ivory:#F7F4EF; --amber:#F5A623; --amber-deep:#E08A00;
-    --green:#3DDC97; --slate:#8FA3AD; --slate-2:#5B6B75;
+    --green:#3DDC97; --slate:#A4B4BC; --slate-2:#95A7B0;
     --line:rgba(247,244,239,.10); --line-strong:rgba(247,244,239,.18);
     --display:'Space Grotesk',system-ui,sans-serif;
     --body:'Inter',system-ui,sans-serif;
@@ -183,7 +183,8 @@
 
   /* final cta */
   .cta-band{background:linear-gradient(120deg,#0d2735,#0b1f2a 60%);border:1px solid var(--line-strong);border-radius:26px;padding:56px;text-align:center;position:relative;overflow:hidden}
-  .cta-band:before{content:"";position:absolute;inset:0;background:radial-gradient(500px 260px at 50% -10%,rgba(245,166,35,.18),transparent 60%)}
+  .cta-band:before{content:"";position:absolute;inset:0;background:radial-gradient(500px 260px at 50% -10%,rgba(245,166,35,.18),transparent 60%);pointer-events:none}
+  .cta-band .btn{position:relative;z-index:1}
   .cta-band h2{font-size:clamp(30px,4vw,46px);position:relative}
   .cta-band p{color:#CFCABF;font-size:18px;margin:16px auto 30px;max-width:52ch;position:relative}
   .cta-note{font-family:var(--mono);font-size:12px;color:var(--slate);margin-top:18px;letter-spacing:.04em;position:relative}
@@ -194,6 +195,40 @@
   .foot-in .logo{font-size:18px}
   footer small{color:var(--slate-2);font-size:13px;display:block;max-width:44ch;margin-top:10px}
   .foot-links{display:flex;gap:22px;font-size:14px;color:var(--slate)}
+
+  /* hero overflow safeguard on mobile stack */
+  .hero-grid > *{min-width:0}
+  .monitor{max-width:100%}
+
+  /* currency note */
+  .cur-note{text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--slate);margin-top:24px}
+  .cur-note b{color:var(--ivory);font-weight:500}
+  .mon-cur{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin-top:12px;text-align:right}
+
+  /* pricing strip */
+  .pricing-strip{max-width:720px;margin:0 auto;text-align:center;background:var(--navy-panel);border:1px solid var(--line-strong);border-radius:18px;padding:28px 30px}
+  .pricing-strip .big{font-family:var(--display);font-weight:700;font-size:clamp(21px,3vw,28px);color:var(--ivory);letter-spacing:-.01em}
+  .pricing-strip .big b{color:var(--amber)}
+  .pricing-strip .peso{display:block;font-family:var(--mono);font-size:13.5px;color:var(--green);margin-top:8px;letter-spacing:.02em}
+  .pricing-strip .note{font-size:14px;color:var(--slate);margin-top:12px;max-width:52ch;margin-left:auto;margin-right:auto}
+
+  /* estimate calculator */
+  .estimate{max-width:640px;margin:44px auto 0;background:linear-gradient(180deg,var(--navy-panel),#0b2430);border:1px solid var(--line-strong);border-radius:20px;padding:32px;box-shadow:0 26px 60px -34px rgba(0,0,0,.7)}
+  .estimate h3{font-size:22px;margin-bottom:6px}
+  .estimate .sub{font-size:14.5px;color:var(--slate);margin-bottom:22px}
+  .est-row{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end}
+  .est-field{flex:1 1 220px;display:flex;flex-direction:column;gap:8px}
+  .est-field label{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate)}
+  .inputwrap{display:flex;align-items:center;background:var(--navy-deep);border:1px solid var(--line-strong);border-radius:12px;padding:0 14px}
+  .inputwrap span{color:var(--slate);font-family:var(--mono);font-size:16px}
+  .inputwrap input{background:transparent;border:0;color:var(--ivory);font-family:var(--body);font-size:16px;padding:14px 8px;width:100%;outline:none}
+  .est-out{margin-top:22px;padding:22px;border-radius:14px;background:rgba(61,220,151,.07);border:1px solid rgba(61,220,151,.25);display:none}
+  .est-out.show{display:block}
+  .est-out .amt{font-family:var(--display);font-weight:700;font-size:clamp(23px,4vw,32px);color:var(--green);letter-spacing:-.01em}
+  .est-out .usd{font-size:14px;color:var(--slate);margin-top:6px}
+  .est-out .cta-line{margin-top:14px;font-size:14px;color:#C6C1B7}
+  .est-err{color:var(--amber);font-size:13px;margin-top:12px;display:none}
+  .est-err.show{display:block}
 
   :focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px}
   @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto}}
@@ -218,7 +253,7 @@
       <a href="#difference">The difference</a>
       <a href="#how">How it works</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn-primary btn-sm" href="https://api.leadconnectorhq.com/widget/booking/HYbkri3gw1CDqlj1TGjp" data-book>Book a call</a>
+      <a class="btn btn-primary btn-sm" href="https://api.leadconnectorhq.com/widget/booking/HYbkri3gw1CDqlj1TGjp" data-book target="_blank" rel="noopener noreferrer">Book a call</a>
     </nav>
   </div>
 </header>
@@ -233,8 +268,8 @@
       <h1>See exactly what you save — <span class="u">down to the watt</span> — from day one.</h1>
       <p class="lede">Premium solar + battery, installed by one dedicated engineer, with the SunVault&nbsp;Live app for life. No guessing. Just proof.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/booking/HYbkri3gw1CDqlj1TGjp" data-book>Book a Solar Savings &amp; Design Call →</a>
-        <a class="btn btn-ghost" href="#difference">See how it works</a>
+        <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/booking/HYbkri3gw1CDqlj1TGjp" data-book target="_blank" rel="noopener noreferrer">Book a Solar Savings &amp; Design Call →</a>
+        <a class="btn btn-ghost" href="#estimate">See how it works</a>
       </div>
       <div class="trust">
         <div class="t"><b>$0</b><span>to design your system</span></div>
@@ -266,6 +301,7 @@
         <div class="mon-stat"><div class="k">Saved today</div><div class="v green">$<span data-count="4.40" data-dec="2">0</span></div><div style="font-family:var(--mono);font-size:11px;color:var(--slate);margin-top:2px">₱248</div></div>
         <div class="mon-stat"><div class="k">Battery</div><div class="v">100%<span style="color:var(--green)"> ▲</span></div></div>
       </div>
+      <div class="mon-cur">Figures in USD · ₱ PHP equivalent</div>
     </div>
   </div>
 </section>
@@ -313,6 +349,17 @@
   </div>
 </section>
 
+<!-- PRICING (surfaced early so visitors can self-qualify) -->
+<section id="pricing" style="padding:8px 0 72px">
+  <div class="wrap">
+    <div class="pricing-strip">
+      <div class="big">Typical investment: <b>$3,200 – $12,150</b></div>
+      <span class="peso">≈ ₱180,000 – ₱680,000</span>
+      <p class="note">Depends on system size, battery, and whether you add EV charging. Your exact number — and payback period — comes from the free design call.</p>
+    </div>
+  </div>
+</section>
+
 <!-- STATS -->
 <section class="band">
   <div class="wrap stats" id="stats">
@@ -321,6 +368,7 @@
     <div class="s"><b><span data-count="24">0</span>/7</b><span>live system monitoring</span></div>
     <div class="s"><b><span data-count="25">0</span>yr</b><span>performance warranty</span></div>
   </div>
+  <div class="wrap"><p class="cur-note">Figures shown in <b>USD</b>, with the Philippine peso (<b>₱ PHP</b>) equivalent alongside.</p></div>
 </section>
 
 <!-- HOW IT WORKS -->
@@ -363,7 +411,6 @@
         <div class="who"><div class="av">GO</div><div><b>Grace O.</b><span>Whole-home + EV charger</span></div></div>
       </div>
     </div>
-    <p style="font-size:12px;color:var(--slate-2);margin-top:20px;font-family:var(--mono)">* Illustrative testimonials for this showcase build.</p>
   </div>
 </section>
 
@@ -388,13 +435,40 @@
   </div>
 </section>
 
+<!-- ESTIMATE (low-friction secondary CTA) -->
+<section class="band" id="estimate">
+  <div class="wrap">
+    <div class="sec-head" style="margin:0 auto;text-align:center">
+      <span class="eyebrow">Not ready to book?</span>
+      <h2>Estimate your savings in 10 seconds.</h2>
+    </div>
+    <div class="estimate">
+      <h3>What could solar save you?</h3>
+      <p class="sub">Enter your average monthly electric bill for a rough yearly savings range. Your exact number comes from the free design call.</p>
+      <div class="est-row">
+        <div class="est-field">
+          <label for="bill">Average monthly electric bill</label>
+          <div class="inputwrap"><span>₱</span><input id="bill" type="number" inputmode="numeric" min="0" placeholder="12,000" aria-label="Average monthly electric bill in pesos" /></div>
+        </div>
+        <button class="btn btn-primary" type="button" id="estBtn">Estimate my savings</button>
+      </div>
+      <p class="est-err" id="estErr">Please enter your average monthly bill (for example, 12000).</p>
+      <div class="est-out" id="estOut" aria-live="polite">
+        <div class="amt" id="estAmt">—</div>
+        <div class="usd" id="estUsd"></div>
+        <p class="cta-line">Want your exact number and payback period? <a href="https://api.leadconnectorhq.com/widget/booking/HYbkri3gw1CDqlj1TGjp" data-book target="_blank" rel="noopener noreferrer" style="color:var(--amber);font-weight:600">Book your free design call →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section>
   <div class="wrap">
     <div class="cta-band">
       <h2>Find out what your roof could save.</h2>
       <p>Book a free 30-minute Solar Savings &amp; Design Call. Real numbers for your home, from the engineer who'd actually build it.</p>
-      <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/booking/HYbkri3gw1CDqlj1TGjp" data-book>Book a Solar Savings &amp; Design Call →</a>
+      <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/booking/HYbkri3gw1CDqlj1TGjp" data-book target="_blank" rel="noopener noreferrer">Book a Solar Savings &amp; Design Call →</a>
       <div class="cta-note">No pressure · No obligation · Just proof</div>
     </div>
   </div>
@@ -419,7 +493,7 @@
       <a href="#difference">The difference</a>
       <a href="#how">How it works</a>
       <a href="#faq">FAQ</a>
-      <a href="https://api.leadconnectorhq.com/widget/booking/HYbkri3gw1CDqlj1TGjp" data-book>Book a call</a>
+      <a href="https://api.leadconnectorhq.com/widget/booking/HYbkri3gw1CDqlj1TGjp" data-book target="_blank" rel="noopener noreferrer">Book a call</a>
     </div>
   </div>
   <div class="wrap" style="margin-top:26px"><small style="color:var(--slate-2)">© SunVault 2026 · Showcase build. Demo data only. No real payments or services offered.</small></div>
@@ -459,6 +533,31 @@
       }, 1600);
     }, 2200);
   }
+
+  // Savings estimator (rough range from average monthly bill)
+  (function(){
+    const btn = document.getElementById('estBtn');
+    if(!btn) return;
+    const PHP_PER_USD = 56;
+    const bill = document.getElementById('bill');
+    const out  = document.getElementById('estOut');
+    const amt  = document.getElementById('estAmt');
+    const usd  = document.getElementById('estUsd');
+    const err  = document.getElementById('estErr');
+    const pesoR = n => '₱' + (Math.round(n/1000)*1000).toLocaleString();
+    const usdR = n => '$' + (Math.round(n/50)*50).toLocaleString();
+    function calc(){
+      const b = parseFloat((bill.value||'').replace(/[^0-9.]/g,''));
+      if(!b || b <= 0){ err.classList.add('show'); out.classList.remove('show'); return; }
+      err.classList.remove('show');
+      const lo = b*12*0.70, hi = b*12*0.85;
+      amt.textContent = pesoR(lo) + ' – ' + pesoR(hi) + ' / year';
+      usd.textContent = '≈ ' + usdR(lo/PHP_PER_USD) + ' – ' + usdR(hi/PHP_PER_USD) + ' per year, based on a typical 70–85% offset.';
+      out.classList.add('show');
+    }
+    btn.addEventListener('click', calc);
+    bill.addEventListener('keydown', e => { if(e.key === 'Enter'){ e.preventDefault(); calc(); } });
+  })();
 </script>
 </body>
 </html>
